@@ -25,12 +25,18 @@ WHERE (replacement_cost between 10 and 15) AND special_features LIKE '%Trailers%
 -- 5. address 테이블에서 거리(district)가 A로 시작하는 주소(address)만 앞에 숫자 제외 주소만 10개 조회 
 SELECT address, district
 FROM address
-WHERE district LIKE 'A%' AND substr(addres, (char_length(address) - instr(address, ' ')+1), char_length(address))
+WHERE district LIKE 'A%'
 LIMIT 0, 10;
 
 -- 6. customer 테이블에서 id가 6인 사람부터 10명 조회
+SELECT *
+FROM customer
+WHERE id = 6
+LIMIT 0, 10;
 
 -- 7. actor 테이블에서 first_name이 J로 시작하는 사람의 last_name의 글자수 조회 (공백 X, 정렬은 글자수가 많은 사람 순으로)
+SELECT 
+FROM actor
 
 -- 8. film 테이블에서 description에서 of 이전 문장만 중복 없이 10개만 추출해서 조회
 
