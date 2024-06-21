@@ -23,21 +23,36 @@ FROM film
 WHERE (replacement_cost between 10 and 15) AND special_features LIKE '%Trailers%';
 
 -- 5. address 테이블에서 거리(district)가 A로 시작하는 주소(address)만 앞에 숫자 제외 주소만 10개 조회 
-SELECT address, district
+select * from address where district like 'A%';
+
+SELECT 
+	address
 FROM address
-WHERE district LIKE 'A%'
+WHERE district LIKE 'A%' AND substr(district, 1, 4) LIke '%in (1,2,3,4,5,6,7,8,9)%'
 LIMIT 0, 10;
 
 -- 6. customer 테이블에서 id가 6인 사람부터 10명 조회
+select * from customer;
+
 SELECT *
 FROM customer
-WHERE id = 6
+WHERE customer_id >= 6
 LIMIT 0, 10;
 
 -- 7. actor 테이블에서 first_name이 J로 시작하는 사람의 last_name의 글자수 조회 (공백 X, 정렬은 글자수가 많은 사람 순으로)
-SELECT 
+select * from actor;
+
+SELECT first_name, last_name, char_length(last_name)
 FROM actor
+WHERE first_name LIKE 'J%'
+ORDER BY char_length(last_name) DESC;
 
 -- 8. film 테이블에서 description에서 of 이전 문장만 중복 없이 10개만 추출해서 조회
+select * from film;
+
+SELECT *
+FROM film
+WHERE replace(description, '','');
+
 
 -- 9. film 테이블에서 replacement_cost 최소 비용과 최대 비용 조회

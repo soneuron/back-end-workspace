@@ -393,6 +393,7 @@ SELECT
     max(emp_name), max(salary), max(hire_date)
 FROM employee;
 
+
 /*
 	COUNT
     - 컬럼 또는 행의 개수를 세서 반환
