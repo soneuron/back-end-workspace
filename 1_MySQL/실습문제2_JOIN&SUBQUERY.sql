@@ -63,5 +63,11 @@ WHERE customer_id = (SELECT customer_id
 
 
 -- 5. 이메일이 JOYCE.EDWARDS@sakilacustomer.org인 고객이 가장 최근에 빌린 영화 제목과 영화 내용을 조회 
+SELECT * FROM rental; -- DVD 대여 정보 : customer_id, inventory_id
 
+
+
+SELECT title, description
+FROM film
+	JOIN 
 
