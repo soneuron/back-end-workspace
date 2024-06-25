@@ -19,7 +19,7 @@ INSERT INTO publisher(pub_name, phone) VALUES('프리렉', '032-326-7282');
 INSERT INTO publisher(pub_name, phone) VALUES('인사이트', '02-322-5143');
 INSERT INTO publisher(pub_name, phone) VALUES('길벗', '02-332-0931');
 
-select * from publisher;
+select * from publisher; -- 출판사 데이터
 
 -- 2. 도서들에 대한 데이터를 담기 위한 도서 테이블 (book)
 --    컬럼 : bk_no (도서번호) -- 기본 키
@@ -34,7 +34,7 @@ CREATE TABLE book(
     bk_author VARCHAR(30) NOT NULL,
     bk_price INT,
     bk_pub_no INT,
-    FOREIGN KEY (bk_pub_no) REFERENCES publisher(pub_no)  
+    FOREIGN KEY (bk_pub_no) REFERENCES publisher(pub_no)
 );
 INSERT INTO book(bk_title, bk_author, bk_price, bk_pub_no) VALUES('개발자를 위한 생각의 정리, 문서 작성법', '카이마이 미즈히로', '20000', 1);
 INSERT INTO book(bk_title, bk_author, bk_price, bk_pub_no) VALUES('1일 1로그 100일 완성 IT지식', '브라이언w. 커니핸', '200000', 2);
@@ -42,7 +42,9 @@ INSERT INTO book(bk_title, bk_author, bk_price, bk_pub_no) VALUES('개발자가 
 INSERT INTO book(bk_title, bk_author, bk_price, bk_pub_no) VALUES('피플웨어', '톰 드마르코', '16800', 2);
 INSERT INTO book(bk_title, bk_author, bk_price, bk_pub_no) VALUES('그로스 해킹', '라이언 홀리데이', '13800', 3);
 
-select * from book;
+ALTER TABLE book RENAME COLUMN bk_pub_no TO pub_no;
+
+select * from book; -- 도서 데이터
 
 -- 3. 회원에 대한 데이터를 담기 위한 회원 테이블 (member)
 --    컬럼 : member_no(회원번호) -- 기본 키
@@ -72,6 +74,7 @@ VALUES('user02', 'pass02', '라마바', 'M', '서울시 서초구', '010-3333-44
 INSERT INTO member(member_id, member_pwd, member_name, gender, address, phone, status, enroll_date)
 VALUES('user03', 'pass03', '사아자', 'F', '경기도 광주시', '010-4444-5555', 'N', current_date());
 
+select * from member; -- 회원 데이터
 
 -- 4. 도서를 대여한 회원에 대한 데이터를 담기 위한 대여 목록 테이블(rent)
 --    컬럼 : rent_no(대여번호) -- 기본 키
@@ -89,10 +92,26 @@ CREATE TABLE rent(
     FOREIGN KEY (rent_book_no) REFERENCES book(bk_no) ON DELETE SET NULL,
     rent_date DATE
 );
-INSERT INTO rent(member_no, bk_no, rent_date) VALUES(
+INSERT INTO rent(rent_mem_no, rent_book_no, rent_date) VALUES(1, 2, current_date());
+INSERT INTO rent(rent_mem_no, rent_book_no, rent_date) VALUES(1, 3, current_date());
+INSERT INTO rent(rent_mem_no, rent_book_no, rent_date) VALUES(2, 1, current_date());
+INSERT INTO rent(rent_mem_no, rent_book_no, rent_date) VALUES(2, 2, current_date());
+INSERT INTO rent(rent_mem_no, rent_book_no, rent_date) VALUES(1, 5, current_date());
+
+ALTER TABLE rent RENAME COLUMN rent_mem_no TO member_no;
+ALTER TABLE rent RENAME COLUMN rent_book_no TO bk_no;
+
+select * from rent; -- 도서를 대여한 회원에 대한 데이터를 담기 위한 대여 목록
 
 -- 5. 2번 도서를 대여한 회원의 이름, 아이디, 대여일, 반납 예정일(대여일 + 7일)을 조회하시오.
+select * from publisher; -- 출판사 데이터
+select * from book; -- 도서 데이터
+select * from member; -- 회원 데이터
+select * from rent; -- 도서를 대여한 회원에 대한 데이터를 담기 위한 대여 목록
 
+SELECT member_name, member_id, rent_date, adddate(rent_date, interval 7 day)
+FROM book
+	JOIN 
 
 
 

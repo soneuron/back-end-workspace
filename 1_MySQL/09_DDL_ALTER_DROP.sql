@@ -180,3 +180,5 @@ INSERT INTO member(mem_id, mem_pwd, mem_name, grade_id)
 VALUES('user02', 'pass02', '김경주', 1);
 INSERT INTO member(mem_id, mem_pwd, mem_name, grade_id)
 VALUES('user03', 'pass03', '우현성', 2);
+
+select * from member;
