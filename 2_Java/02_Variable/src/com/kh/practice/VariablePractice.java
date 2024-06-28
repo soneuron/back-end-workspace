@@ -1,16 +1,21 @@
 package com.kh.practice;
 
+import java.util.Scanner;
+
 public class VariablePractice {
+	
+	Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		VariablePractice practice = new VariablePractice();
-		practice.method1();
-		practice.method2();
-		practice.method3();
-		practice.method4();
-		practice.method5();
-		practice.method6();
-		practice.method7();
+//		practice.method1();
+//		practice.method2();
+//		practice.method3();
+//		practice.method4();
+//		practice.method5();
+//		practice.method6();
+//		practice.method7();
+		
 	}
 	
 	/*
@@ -25,6 +30,18 @@ public class VariablePractice {
 		int child = 7000;
 		System.out.println("--- Q1 ---");
 		System.out.println(adult * 2 + child * 3);
+		
+		/* 
+		 * int adultPrice = 10000;
+		 * int teenPrice = 7000;
+		 * int adultCount = 2;
+		 * int teenCount = 3;
+		 * 
+		 * int total = adultPrice*adultCount + teenPrice*teenCount;
+		 * 
+		 * System.out.println("총 지불해야 할 금액 " + (adultPrice*adultCount + teenPrice*teenCount) + "원");
+		 * System.out.println("총 지불해야 할 금액 " + total + "원")
+		 * */
 	}
 	
 	/*
@@ -40,6 +57,10 @@ public class VariablePractice {
 		int x = 5;
 		int y = 7;
 		int z = 9;
+		
+		// int tmp = x;
+		// x = y;
+		// z = tmp;
 		
 		System.out.println("--- Q2 ---");
 		System.out.println("x=" + y);
@@ -58,6 +79,19 @@ public class VariablePractice {
 	 * 나누기 몫 : 3
 	 * */
 	public void method3() {
+
+		// System.out.print("첫 번째 정수 : ");
+		// int num1 = sc.nextInt();
+		// System.out.print("두 번째 정수 : ");
+		// int num2 = sc.nextInt();
+		
+		// Systemour.println("더하기 : " + (num1 + num2));
+		// Systemour.println("빼기 : " + (num1 - num2));
+		// Systemour.println("곱하기 : " + num1 * num2);
+		// Systemour.println("나누기 몫 : " + num1/num2);
+		
+		
+		
 		int first = 23;
 		int second = 7;
 		System.out.println("--- Q3 ---");
@@ -80,6 +114,17 @@ public class VariablePractice {
 	 * 둘레 : 110.4
 	 * */
 	public void method4() {
+		// System.out.print("가로 : ");
+		// float num1 = sc.nextFloat();
+		// System.out.print("세로 : ");
+		// float num2 = sc.nextFloat();
+		
+		// double area = num1 * num2;
+		// double size = (num1 + num2) *2;
+		
+		// System.out.printf("면적 : %.2f\n", area);
+		// System.out.printf("둘레 : %.1f", size);
+		
 		double width = 13.5;
 		double height = 41.7;
 		System.out.println("--- Q4 ---");
@@ -99,7 +144,14 @@ public class VariablePractice {
 	 * */
 	public void method5() {
 		System.out.println("--- Q5 ---");
-		System.out.println();
+		
+		System.out.print("문자열을 입력하세요 : ");
+		String word = sc.nextLine();
+		
+		System.out.println("첫번째 문자 : " + word.charAt(0));
+		System.out.println("두번째 문자 : " + word.charAt(1));
+		System.out.println("마지막 문자 : " + word.charAt(word.length()-1));
+		
 	}
 
 	/*
@@ -112,9 +164,17 @@ public class VariablePractice {
 	public void method6() {
 		char c = 'A';
 		System.out.println("--- Q6 ---");
-		System.out.println(c + " unicide :" + (int)c);
-		System.out.println((char)(c+1) + " unicide :" + ((int)c +1));
+		System.out.println(c + " unicode :" + (int)c);
+		System.out.println((char)(c+1) + " unicode :" + ((int)c +1));
 		
+		// System.out.print("문자 : ");
+		// char ch = sc.nextLine.charAt(0);
+		
+		// int num + ch;
+		
+		// char ch2 = (char)(num + 1);
+		// System.out.println(ch + " unicode : " + num);
+		// System.out.println(ch2 + " unicode : " + (int)ch2);
 	}
 	
 	/*
@@ -135,6 +195,18 @@ public class VariablePractice {
 		System.out.println("수학 : " + math);
 		System.out.println("영어 : " + en);
 		System.out.printf("총점은%d점 이고, 평균은%.2f점 입니다.", (k+math+en),((double)(k+math+en)/3));
+		
+		// System.out.print("국어 : ");
+		// int kScore = sc.nextInt();
+		// System.out.print("영어 : ");
+		// int eScore = sc.nextInt();
+		// System.out.print("수학 : ");
+		// int mScore = sc.nextInt();
+		
+		// int sum = kScore + eScore + mScore;
+		
+		// System.out.println("총점 : " + sum);
+		// System.out.printf("평균 : %.2f", ((double)sum/3));
 	}
 
 }

@@ -41,10 +41,10 @@ public class C_Printf {
 		System.out.println("----------------------------");
 		
 		double dNum1 = 1.23456789;
-		double dNum2 = 4.53;
+		double dNum2 = 4321.53;
 
 		System.out.printf("%f\t%f\n", dNum1, dNum2); // 무조건 소수점 아래 6번째 자리까지
-		System.out.printf("%.3f\t%.2f\n", dNum1, dNum2);
+		System.out.printf("%.3f\t%.1f\n", dNum1, dNum2);
 		
 		System.out.println("-----------------------------");
 		
