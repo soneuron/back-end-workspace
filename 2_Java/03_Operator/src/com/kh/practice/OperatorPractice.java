@@ -10,7 +10,7 @@ public class OperatorPractice {
 	public static void main(String[] args) {
 		OperatorPractice op = new OperatorPractice();
 //		op.method1();
-		op.method2();
+//		op.method2();
 //		op.method3();
 //		op.method4();
 //		op.method5();
@@ -71,7 +71,7 @@ public class OperatorPractice {
 		System.out.print("주민번호를 입력하세요.( - 포함) > ");
 		String no = sc.nextLine();
 		
-		String result = no.charAt(7) == '1' ? "남자" : no.charAt(7) == '2' ? "여자" : "다시 입력해주세요";
+		String result = no.charAt(7) == '1' || no.charAt(7) == '3' ? "남자" : no.charAt(7) == '2' || no.charAt(7) == '4' ? "여자" : "다시 입력해주세요";
 		System.out.print(result);
 	}
 
@@ -95,6 +95,8 @@ public class OperatorPractice {
 		
 		int result = (apple % basket) == 0 ? (apple / basket) : ((apple / basket) + 1);
 		System.out.println("필요한 바구니는 " + result + "개입니다.");
+		
+		// System.out.println(apple / basket + (apple % basket == 0 ? 0 : 1));
 	}
 	
 }
