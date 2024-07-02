@@ -16,10 +16,10 @@ public class ConditionPractice {
 //		c.method5();
 //		c.method6();
 //		c.method7();
-		c.method8();
+//		c.method8();
 //		c.method9();
 //		c.method10();
-//		c.method11();
+		c.method11();
 	}
 
     /*
@@ -312,6 +312,8 @@ public class ConditionPractice {
     		System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");
     	}
     }
+    
+    // return : 그 자리에서 종료
 
     /*
       아래 예시와 같이 메뉴를 출력하고 메뉴 번호를 누르면 “OO메뉴입니다“를, 종료 번호를 누르면 “프로그램이 종료됩니다.”를 출력하세요
@@ -334,22 +336,43 @@ public class ConditionPractice {
     	int number = sc.nextInt();
     	
     	switch(number) {
-    	case 1 : 
-    		System.out.println("입력 메뉴입니다.");
-    		break;
-    	case 2 : 
-    		System.out.println("수정 메뉴입니다.");
-    		break;
-    	case 3 : 
-    		System.out.println("조회 메뉴입니다.");
-    		break;
-    	case 4 : 
-    		System.out.println("삭제 메뉴입니다.");
-    		break;
-    	case 9 : 
-    		System.out.println("프로그램이 종료됩니다.");
-    		break;
+	    	case 1 : 
+	    		System.out.println("입력 메뉴입니다.");
+	    		break;
+	    	case 2 : 
+	    		System.out.println("수정 메뉴입니다.");
+	    		break;
+	    	case 3 : 
+	    		System.out.println("조회 메뉴입니다.");
+	    		break;
+	    	case 4 : 
+	    		System.out.println("삭제 메뉴입니다.");
+	    		break;
+	    	case 9 : 
+	    		System.out.println("프로그램이 종료됩니다.");
+	    		break;
     	}
+    	
+    	String result = "";
+    	
+    	switch(number) {
+	    	case 1 : 
+	    		result = "입력 메뉴입니다.";
+	    		break;
+	    	case 2 : 
+	    		result = "수정 메뉴입니다.";
+	    		break;
+	    	case 3 : 
+	    		result = "조회 메뉴입니다.";
+	    		break;
+	    	case 4 : 
+	    		result = "삭제 메뉴입니다.";
+	    		break;
+	    	case 9 : 
+	    		result = "프로그램이 종료됩니다.";
+	    		break;
+    	}
+    		System.out.println(result);
     }
 
     /*
@@ -418,14 +441,14 @@ public class ConditionPractice {
     		System.out.println("PASS");
     	} else if (score<70 && score4<14) {
     		System.out.println("===========결과===========");
-    		System.out.println("FAIL [출석 횟수 부족] " + "("+score4+"/20)");
-    		System.out.println("FAIL [점수 미달] " + "(총점 "+score+")");
+    		System.out.println("FAIL [출석 횟수 부족] ("+score4+"/20)");
+    		System.out.println("FAIL [점수 미달] (총점 "+score+")");
     	} else if (score<70 && score4>14) {
     		System.out.println("===========결과===========");
-    		System.out.println("FAIL [점수 미달] " + "(총점 "+score+")");
+    		System.out.println("FAIL [점수 미달] (총점 "+score+")");
     	} else if (score>70 && score4<14) {
     		System.out.println("===========결과===========");
-    		System.out.println("FAIL [출석 횟수 부족] " + "("+score4+"/20)");
+    		System.out.println("FAIL [출석 횟수 부족] ("+score4+"/20)");
     	}
     }
     
