@@ -199,7 +199,7 @@ INSERT INTO pro_like VALUES(1, 'A', current_date());
 
 SELECT * FROM pro_like;
 
--- 회훵증급에 대한 데이터를 따로 보관하는 테이블
+-- 회원등급에 대한 데이터를 따로 보관하는 테이블
 DROP TABLE mem_grade;
 CREATE TABLE mem_grade(
 	grade_code INT PRIMARY KEY AUTO_INCREMENT,

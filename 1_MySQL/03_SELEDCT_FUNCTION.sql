@@ -2,7 +2,7 @@
 	함수 : 전달된 컬럼값을 읽어들여서 함수를 실행한 결과를 반환
     
     - 단일행 함수 : N개의 값을 읽어서 N개의 결과값을 리턴 (매 행마다 함수 실행 결과 반환)
-    - 그룹 함수 : N개의 값을 ㅣㅇㄺ어서 1개의 결과값 리턴 (그룹별로 함수 실행 결과 반환)
+    - 그룹 함수 : N개의 값을 읽어서 1개의 결과값 리턴 (그룹별로 함수 실행 결과 반환)
     
     >> SELECT 절에 단일행 함수와 그룹 함수는 함께 사용하지 못함
 		??? 결과 행의 개수가 다르기 때문 !!!
@@ -15,7 +15,7 @@
 /*
 	문자 처리 함수
     
-    LENGHT : 해당 문자열 값의 BYTE 길이 수 반환
+    LENGTH : 해당 문자열 값의 BYTE 길이 수 반환
     - 한글 1글자 -> 3BTYE
     - 영문자, 숫자, 특수문자 1글자 -> 1BYTE
 	CHAR_LENGHT : 해당 문자열값의 글자 수 반환 
@@ -326,8 +326,8 @@ SELECT
     job_code, 
     salary,
 	format(case when job_code = 'J7' then salary*1.1
-		 when job_code = 'J6' then salary*1.15
-         when job_code = 'J5' then salary*1.2
+				when job_code = 'J6' then salary*1.15
+				when job_code = 'J5' then salary*1.2
          else salary * 1.05
 		 end, 0) "인상된 급여"
 FROM employee

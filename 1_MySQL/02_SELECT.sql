@@ -111,7 +111,7 @@ FROM employee;
 SELECT DISTINCT dept_code
 FROM employee;
 
--- employee 테이블에 직급코드(job_code), 부서코드(dept_code) 조회alter
+-- employee 테이블에 직급코드(job_code), 부서코드(dept_code) 조회
 -- 유의사항! DISTINCT는 SELECT절에 딱 한 번만 기술 가능
 SELECT DISTINCT job_code, dept_code
 FROM employee;
