@@ -82,7 +82,7 @@ public class A_Variable {
 		System.out.println(fNum);
 		
 		// * 참조 자료형 : 4byte, 기본형을 제외한 나머지 (클래스) : 주소 값을 저장
-		// 실제 데이터 값은 힘 메모리에 저장항고,
+		// 실제 데이터 값은 힙 메모리에 저장하고,
 		// 스택 메모리의 변수 공간에는 실제 변수값이 저장된 힙 메모리의 위치값을 저장
 		String name = "장영태"; 
 		String name2 = new String("장영태");

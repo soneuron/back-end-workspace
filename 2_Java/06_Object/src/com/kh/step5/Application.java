@@ -23,7 +23,7 @@ public class Application {
 		System.out.println(book1.getTitle());
 		
 		// getter 가 값을 가지고 오는 역할
-		//허송세월의 원래 가격은 18000원, 할인된 가격은 14400원
+		// 허송세월의 원래 가격은 18000원, 할인된 가격은 14400원
 		// THE MONEY BOOK의 원래 가격은 22000원, 할인된 가격은 19800원
 		System.out.println(book2.getTitle() + "의 원래 가격은 " + book2.getPrice() + "원, 할인된 가격은 " + 
 							(int)(book2.getPrice()-book2.getPrice()*book2.getDiscountRate()) + "원");

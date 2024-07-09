@@ -152,8 +152,8 @@ public class D_While {
 //		d.method1();
 //		d.method2();
 //		d.method3();
-//		d.method4();
-		d.method5();
+		d.method4();
+//		d.method5();
 	}
 
 }
