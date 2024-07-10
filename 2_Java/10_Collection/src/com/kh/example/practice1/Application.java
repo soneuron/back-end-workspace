@@ -3,80 +3,98 @@ package com.kh.example.practice1;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 
 public class Application {
 
 	public static void main(String[] args) {
 		
-		HashSet<Integer> setLotto = new HashSet<Integer>();
-		HashSet<Integer> setMy = new HashSet<Integer>();
+//		HashSet<Integer> setLotto = new HashSet<Integer>();
+//		HashSet<Integer> setMy = new HashSet<Integer>();
+//		
+//		
+//		while(setLotto.size() < 6) {
+//			int random = (int)(Math.random()*45+1);
+//			if(setLotto.size() < 6) {
+//				setLotto.add(random);
+//			}
+//		}
+//		System.out.println(setLotto);
+//		
+//		while(setMy.size() < 6) {
+//			int random1 = (int)(Math.random()*45+1);
+//			if(setMy.size() < 6) {
+//				setMy.add(random1);
+//			}
+//		}
+//		System.out.println(setMy);
+//		
+//		while(setMy == setLotto) {
+//			
+//		}
+//		
+	
 		
+/*-------------------------- 풀이 ------------------------------------*/
+
+
+		ArrayList<Integer> lotto = new ArrayList<Integer>();
 		
-		while(setLotto.size() < 6) {
-			int random = (int)(Math.random()*45+1);
-			if(setLotto.size() < 6) {
-				setLotto.add(random);
+		// 기존 로또 번호는 6개, 보너스 번호가 필요해서 1개 더 추가
+		while(lotto.size() < 7) {
+			int num = (int)(Math.random()*45+1);
+			if(!lotto.contains(num)) {
+				lotto.add(num);
 			}
 		}
-		System.out.println(setLotto);
 		
-		while(setMy.size() < 6) {
-			int random1 = (int)(Math.random()*45+1);
-			if(setMy.size() < 6) {
-				setMy.add(random1);
-			}
-		}
-		System.out.println(setMy);
+		// 0 ~ 6 까지 범위지정 후 로또 번호 6개 따로, 보너스 번호 따로
+		List<Integer> lottoList = lotto.subList(0, 6);
+		int bonus = (int)(Math.random()*45+1);
 		
-		while(setMy == setLotto) {
+		
+		 int count = 0;
+		while(true) {
+			count++;
+			ArrayList<Integer> myLotto = new ArrayList<Integer>();
 			
+			while(myLotto.size() < 6) {
+				int num = (int)(Math.random()*45+1);
+				if(!myLotto.contains(num)) {
+					myLotto.add(num);
+			}
 		}
-		
+			System.out.println("로또 번호 : "+lottoList);
+			System.out.println("내 로또 번호 : "+myLotto);
+			
+			Collections.sort(lottoList);
+			Collections.sort(myLotto);
+			
+			// 멈추는 조건 : 로또 번호와 내 번호가 정확히 일치 할 때
+			if(lotto.equals(myLotto)) {
+				System.out.println("횟수 : "+count);
+				break;
+			}
+			
+			int match = 0;
+			
+			for(Integer num : lottoList) {
+				if(myLotto.contains(num)) {
+					match++;
+				}
+			}
+			
+			if(match == 5) {
+				if(myLotto.contains(bonus)) {
+				System.out.println("2등 당첨! 보너스 번호 : " + bonus + ", 횟수  : "+ count);
+				break;
+				} else {
+					System.out.println("3등 당첨1 횟수 : " + count);
+				}
+			}
 	}
-		
+	}
 }
+		
+	
 
-
-
-// set.size
-// set.contains
-//
-
-//주사위를 10번 굴렸을 때 각 눈의 수가 몇 번 나왔는지 출력하세요. (random 사용!)
-//
-//1 : 3
-//2 : 2
-//3 : 1
-//4 : 0
-//5 : 4
-//6 : 0
-//
-//*/
-//public void method5() {
-//int[] dice = new int[6];
-//
-//for(int i = 0; i<10; i++) {
-//	int random = (int) (Math.random()*6); // 1~6 -> 0~5
-//	dice[random]++;
-//}
-//
-//for(int i = 0; i < dice.length; i++) {
-//	System.out.println((i+1) + " : " + dice[i]);
-
-///*
-//0이 나올 때까지 숫자를 출력하시오. (random 사용! 0 ~ 10)
-//7
-//3
-//4
-//2
-//3
-//4
-//0
-//*/
-//public void method4() {
-//while(true) {
-//	int random = (int) (Math.random()*11);
-//	System.out.println(random);
-//	if(random == 0) break;
-//}
-//}
