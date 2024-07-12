@@ -13,6 +13,8 @@ public class Application {
 	BookController bc = new BookController();
 	Book b = new Book();
 	
+	int count = 0;
+	
 	public static void main(String[] args) {
 		Application app = new Application();
 		app.menu();
@@ -23,28 +25,34 @@ public class Application {
 		
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
-		mp.setName(name);
 	
 		System.out.print("나이 : ");
 		int age = Integer.parseInt(sc.nextLine());
-		mp.setAge(age);
 		
-		while(true) {
+		bc.addMember(name, age);
+		
+		boolean close = true;
+		while(close) {
 			System.out.println("==== 메뉴 ====");
 			System.out.println("1. 마이페이지");
 			System.out.println("2. 도서 대여하기");
 			System.out.println("3. 프로그램 종료하기");
 			System.out.print("메뉴 번호 : ");
-			int number = Integer.parseInt(sc.nextLine());
 			
-			if(number == 1) {
-				System.out.println(mp);
-			} else if (number == 2) {
-				System.out.println(bc);
+			switch(Integer.parseInt(sc.nextLine())) {
+			case 1:
+				System.out.println(bc.myPage());
+				break;
+			case 2:
+				break;
+			case 3:
+				System.out.println("프로그램을 종료합니다.");
+				close = false;
+				return;
+				
 			}
 		}
-		
-
-		
 	}
 }
+			
+			

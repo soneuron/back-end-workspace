@@ -17,7 +17,7 @@ public class A_HashMap {
 	 * - 중복 : 키(key) 중복 안됨, 값(value) 중복 가능
 	 * 
 	 * HashMap
-	 * - Map 인터페이스를 구현한 대표적은 컬렉션 클래스
+	 * - Map 인터페이스를 구현한 대표적인 컬렉션 클래스
 	 * */
 	
 	public void method1() {
