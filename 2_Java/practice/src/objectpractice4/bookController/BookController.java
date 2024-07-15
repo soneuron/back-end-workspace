@@ -17,4 +17,10 @@ public class BookController {
 	public MyPage myPage() {
 		return member;
 	}
+	
+	// 책 대여
+	public void rentBook() {
+		
+	}
+	
 }

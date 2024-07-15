@@ -44,6 +44,9 @@ public class Application {
 				System.out.println(bc.myPage());
 				break;
 			case 2:
+				for(int i = 0; i < book.length; i++){
+					
+				}
 				break;
 			case 3:
 				System.out.println("프로그램을 종료합니다.");
