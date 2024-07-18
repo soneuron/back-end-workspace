@@ -28,8 +28,8 @@ public class PersonTest {
 //			pt.addPerson("이동호", 7, "서울");
 //			pt.updatePerson(new Person(1, "김진주", 8, "제주"));
 //			pt.removePerson(1);
-//			pt.searchAllPerson();
-			pt.searchPerson(2);
+			pt.searchAllPerson();
+//			pt.searchPerson(2);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

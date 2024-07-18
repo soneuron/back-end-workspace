@@ -2,6 +2,9 @@
 
 import java.awt.Toolkit;
 
+import com.kh.step3.BeepPrintTest1;
+import com.kh.step3.BeepPrintTest2;
+
 public class BeepPrintTest {
 
 	public static void main(String[] args) {
