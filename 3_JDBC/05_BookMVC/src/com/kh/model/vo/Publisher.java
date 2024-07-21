@@ -1,4 +1,4 @@
-package com.kh.model;
+package com.kh.model.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 
 public class Publisher {
 
-	private int pub_no;
-	private String pub_name;
+	private int pubNo;
+	private String pubName;
 	private String phone;
 	
 }

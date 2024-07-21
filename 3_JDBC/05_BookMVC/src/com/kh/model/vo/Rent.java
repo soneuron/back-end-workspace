@@ -1,4 +1,6 @@
-package com.kh.model;
+package com.kh.model.vo;
+
+import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,9 +12,9 @@ import lombok.NoArgsConstructor;
 
 public class Rent {
 
-	private int rent_no;
-	private int member_no;
-	private int bk_no;
-	private int rent_date;
+	private int rentNo;
+	private int rentMemNo;
+	private int rentBookNo;
+	private Date rentDate;
 	
 }
