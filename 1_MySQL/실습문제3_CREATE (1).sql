@@ -61,7 +61,7 @@ CREATE TABLE member(
     member_id VARCHAR(10) UNIQUE NOT NUll,
     member_pwd VARCHAR(20) NOT NULL,
     member_name VARCHAR(10) NOT NULL,
-    gender VARCHAR(3) CHECK(gender IN ('M', 'F')) NOT NULL,
+    gender VARCHAR(3) CHECK(gender IN ('M', 'F')) DEFAULT 'MF',
     address VARCHAR(20),
     phone VARCHAR(13),
     status VARCHAR(2) CHECK(status IN ('N', 'Y')) DEFAULT 'N',
