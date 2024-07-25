@@ -52,6 +52,27 @@ public class MemberDAO {
 		close(ps, conn);
 	}
 	
+	// 로그인
+	public Member login(String id, String password) throws SQLException {
+		Connection conn = connect();
+		String query = "SELECT * FROM member WHERE id=? AND password=?";
+		PreparedStatement ps = conn.prepareStatement(query);
+		
+		ps.setString(1, id);
+		ps.setString(2, password);
+		
+		ResultSet rs = ps.executeQuery();
+		Member member = null;
+		
+		if(rs.next()) {
+			member = new Member(id, password, rs.getString("name"));
+		}
+		
+		close(rs, ps, conn);
+		
+		return member;
+	}
+	
 	// 전체 회원 조회
 	public ArrayList<Member> allMember() throws SQLException {
 		Connection conn = connect();
@@ -78,10 +99,10 @@ public class MemberDAO {
 		
 		ResultSet rs = ps.executeQuery();
 		
-		Member member = new Member();
-		member.setId(id);
-		member.setPassword(rs.getString("password"));
-		member.setName(rs.getString("name"));
+		Member member = null;
+		if(rs.next()) {
+			member = new Member(id, rs.getString("password"), rs.getString("name"));
+		}
 		
 		close(rs, ps, conn);
 		

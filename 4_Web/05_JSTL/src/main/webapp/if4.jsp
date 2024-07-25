@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/search">
-		검색 할 회원 아이디 : <input type="text" name="id"><br>
-		<input type="submit" value="검색">
+	<form action="if4_view.jsp">
+		숫자 : <input type="text" name="number"> <br>
+		<input type="submit" value="전송">
 	</form>
 </body>
 </html>
