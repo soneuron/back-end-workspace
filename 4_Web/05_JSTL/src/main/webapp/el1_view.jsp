@@ -9,7 +9,7 @@
 <body>
 	<h2>1) 기존 방식</h2>
 	<p>request : <%=request.getAttribute("result") %></p>
-	<p>session : <%=session.getAttribute("result") %></p>
+	<p>session : <%=session.getAttribute("result2") %></p>
 	
 	<%-- 
 		EL
@@ -18,7 +18,7 @@
 	 --%>
 	 <h2>2) EL</h2>
 	 <p>request : ${requestScope.result}</p>
-	 <p>session : ${sessionScope.result}</p>
+	 <p>session : ${sessionScope.result2}</p>
 	 <p>${result}</p>
 	 <p>${result2}</p>
 </body>

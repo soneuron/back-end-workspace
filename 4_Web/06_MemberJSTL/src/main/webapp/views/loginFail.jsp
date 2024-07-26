@@ -7,10 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="header.jsp" />
-	<form action="choose5_view.jsp">
-		숫자 : <input type="text" name="number"> <br>
-		<input type="submit" value="전송">
-	</form>
+	<h1>로그인 실패</h1>
+	<a href="/">로그인</a>
 </body>
 </html>
