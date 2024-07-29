@@ -15,7 +15,7 @@
 		 <c:choose>
 			<c:when test="${empty member}">
 				<!-- 로그인 되어 있지 않은 경우 -->
-				<li><a href="/views/register.jsp">회원가입</a></li>
+				<li><a href="/register">회원가입</a></li>
 		
 				<br>
 				 
@@ -36,10 +36,10 @@
 							  실패하면 views/search_fail.jsp "검색 실패했습니다." 출력
 				 -->
 				 
-				<li><a href="/front?command=allMember">전체회원보기</a></li>
+				<li><a href="/allMember.do">전체회원보기</a></li>
 				<!-- 전체 회원보기 : views/allMemberr.jsp에 리스트 출력 -->
 				
-				<li><a href="/front?command=logout">로그아웃</a></li>
+				<li><a href="/logout.do">로그아웃</a></li>
 				<!-- 로그아웃 : 로그인 하고 index.jsp로 이동 -->
 				</c:otherwise>
 		</c:choose>
