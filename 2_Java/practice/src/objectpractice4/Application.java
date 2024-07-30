@@ -44,7 +44,7 @@ public class Application {
 				System.out.println(bc.myPage());
 				break;
 			case 2:
-				for(int i = 0; i < book.length; i++){
+				for(int i = 0; i < ((CharSequence) b).length(); i++){
 					
 				}
 				break;
