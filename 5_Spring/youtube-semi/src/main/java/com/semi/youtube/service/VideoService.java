@@ -18,4 +18,8 @@ public class VideoService {
 	public List<Video> allVideo(){
 		return video.allVideo();
 	}
+	
+	public Video detail(int videoCode) {
+		return video.detail(videoCode);
+	}
 }
