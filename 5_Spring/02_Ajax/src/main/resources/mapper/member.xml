@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.MemberMapper">
+	
+	<select id="idCheck" parameterType="String" resultType="Member"> <!-- parameterType : 받아오는 값의 리턴타입 resultType : DB에서 확인할 값(model 이름에서 확인 가능)-->
+		SELECT *
+		FROM member
+		WHERE id = #{id}
+	</select>
+</mapper>
