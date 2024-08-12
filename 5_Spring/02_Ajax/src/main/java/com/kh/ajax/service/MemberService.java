@@ -15,4 +15,12 @@ public class MemberService {
 	public Member idCheck(String id) {
 		return mp.idCheck(id);
 	}
+
+	public void register(Member vo) {
+		mp.register(vo);
+	}
+	
+//	public Member serialize(String id, String password, String name) {
+//		return mp.serialize(id, password, name);
+//	}
 }

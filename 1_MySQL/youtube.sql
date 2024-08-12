@@ -100,7 +100,7 @@ from video JOIN channel USING (channel_code);
 
 select * from video where video_code='2'
 
-
+select * from youtube.video_like;
 
 
 

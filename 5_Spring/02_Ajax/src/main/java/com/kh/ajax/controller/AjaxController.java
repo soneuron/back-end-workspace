@@ -42,4 +42,40 @@ public class AjaxController {
 			return false;
 		}
 	}
+	
+	@ResponseBody
+	@PostMapping("/serial")
+	public Member serial(Member member) {
+		System.out.println(member);
+		service.register(member);
+		return member;
+	}
+//	public void serial(String id, String password, String name) {
+//		System.out.println(id);
+//		System.out.println(password);
+//		System.out.println(name);
+//		service.register(new Member(id, password, name));
+//	}
+	
+//	@ResponseBody
+//	@PostMapping("/serial")
+//	public void seial(String id, String password, String name) {
+//		
+//		Member member = new Member();
+//		
+//		member = service.serialize(id, password, name);
+//		
+//		System.out.println(member);
+//		return member;
+//	}
 }
+
+
+
+
+
+
+
+
+
+

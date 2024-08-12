@@ -8,4 +8,7 @@ import com.kh.ajax.model.vo.Member;
 public interface MemberMapper {
 
 	Member idCheck(String id);
+	
+	void register(Member vo); // insert = return값이 없음 따라서 [void]
+//	Member serialize(String id, String password, String name);
 }
