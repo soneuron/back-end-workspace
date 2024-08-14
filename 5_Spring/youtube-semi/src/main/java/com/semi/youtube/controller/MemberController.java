@@ -45,5 +45,29 @@ public class MemberController {
 	}
 	
 	// 회원가입
-	
+	@PostMapping("/signup")
+	public String signup(Member vo) {
+		member.signup(vo);
+		return "redirect:/";
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

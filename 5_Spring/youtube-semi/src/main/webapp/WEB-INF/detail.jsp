@@ -17,10 +17,10 @@
 			<h2>${video.videoTitle }</h2>
 			<div class="video-detail-desc">
 				<div class="deail-desc-left">
-					<img alt="" src="${video.channel.chennelImg }">
+					<img alt="" src="${video.channel.channelImg}">
 					<div class="channel-desc">
-						<h3>${video.channel.channelName }</h3>
-						<p>구독자 #{count }명</p>
+						<h3>${video.channel.channelName}</h3>
+						<p>구독자 ${count}명</p>
 					</div>
 					<c:if test="${empty sub }">
 					<button>구독</button>

@@ -1,5 +1,4 @@
-package com.kh.security.config;
-
+package com.semi.youtube.securityconfig;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -10,7 +9,7 @@ import javax.crypto.SecretKey;
 
 import org.springframework.stereotype.Service;
 
-import com.kh.security.model.vo.Member;
+import com.semi.youtube.model.vo.Member;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -20,15 +19,15 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class TokenProvider {
 
-	private SecretKey secretkey = Keys.secretKeyFor(SignatureAlgorithm.HS512);
+private SecretKey secretkey = Keys.secretKeyFor(SignatureAlgorithm.HS512);
 	
 	public String create(Member member) {
 		return Jwts.builder()
 				.signWith(secretkey)
 				.setClaims(Map.of(
 							"id", member.getId(),
-							"name", member.getName(),
-							"role", member.getRole()
+							"email", member.getEmail(),
+							"phone", member.getPhone()
 				))
 				.setIssuedAt(new Date())
 				.setExpiration(Date.from(Instant.now().plus(1,ChronoUnit.DAYS)))
@@ -43,9 +42,8 @@ public class TokenProvider {
 							.getBody();
 		return Member.builder()
 				.id((String)claims.get("id"))
-				.name((String)claims.get("name"))
-				.role((String)claims.get("role"))
+				.email((String)claims.get("email"))
+				.phone((String)claims.get("phone"))
 				.build();
 	}
 }
-

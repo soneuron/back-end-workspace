@@ -13,3 +13,12 @@ form{
 button {
 	width : 100%;
 }
+a {
+	margin-top:  10px;
+	color: black;
+	text-decoration: non;
+}
+
+a:hover {
+	color: darkred;
+}
