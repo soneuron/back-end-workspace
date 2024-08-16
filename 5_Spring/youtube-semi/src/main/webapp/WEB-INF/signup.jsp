@@ -25,7 +25,7 @@
 		<form action="/signup" method="post" onsubmit="return validate()">
 			<div class="mb-3">
 				<label for="id" class="form-label">아이디</label> 
-				<input type="text" class="form-control" id="id" name="id">
+				<input type="text" class="form-control" id="id" name="username">
 				<div id="idCheck" class="form-text"></div>
 			</div>
 			<div class="mb-3">
@@ -46,6 +46,6 @@
 			<button type="submit" class="btn btn-dark">회원가입</button>
 		</form>
 	</div>
-	<script src="${pageContext.request.contextPath}/js/signup.js"></script>
+	<!-- <script src="${pageContext.request.contextPath}/js/signup.js"></script> -->
 </body>
 </html>

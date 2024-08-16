@@ -1,7 +1,7 @@
 -- 회원
 CREATE TABLE member(
 	id VARCHAR(20) PRIMARY KEY,
-    password VARCHAR(20),
+    password VARCHAR(100),
     email VARCHAR(50),
     phone VARCHAR(13)
 );
@@ -98,10 +98,12 @@ VALUES('http://192.168.10.51:8082/video/day6.mp4',
 select * 
 from video JOIN channel USING (channel_code);
 
-select * from video where video_code='2'
+select * from video where video_code='2';
 
-select * from youtube.video_like;
+SELECT * 
+from video_like;
 
+select * from member;
 
 
 
