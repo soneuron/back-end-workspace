@@ -31,9 +31,14 @@
 	 			data: "id=" + encodeURIComponent(id),
 	 			// 응답
 	 			success: function(result){
-	 				// alert(result); // 확인 1
-	 				$("#idCheckView").text("ID 사용 가능");
-	 			} 
+	 				 alert(result); // 확인 1
+	 				 if(result){
+	 					$("#idCheckView").text("ID 사용 가능");
+	 				 } else {
+	 					$("#idCheckView").text("ID 사용 불가");
+	 				 }
+	 				
+	 			}
 	 		})
 	 	});
 	 </script>

@@ -34,8 +34,10 @@ public class AjaxController {
 	@ResponseBody
 	@PostMapping("/check") // post로 보내서 온것임으로 @PostMapping
 	public boolean check(String id) {
+		System.out.println(id);
 		 // 확인 2
 		Member member = service.idCheck(id);
+		System.out.println(member);
 		if(member!=null) {
 			return true;
 		} else {
