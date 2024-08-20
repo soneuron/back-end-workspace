@@ -12,6 +12,8 @@ public interface BoardMapper {
 	
 	void insert(Board vo);
 	
+	int total();
+	
 	List<Board> selectAll(Paging paging);
 	
 //	resultType = returnType, id = method, 

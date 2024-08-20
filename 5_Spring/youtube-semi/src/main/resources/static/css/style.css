@@ -126,7 +126,8 @@ main section {
 
 /* section - video */
 section{
-	display: flex;	
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .video-card {

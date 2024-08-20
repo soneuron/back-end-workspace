@@ -1,4 +1,4 @@
-package com.kh.upload.model.vo;
+package com.semi.youtube.model.vo;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,11 +6,10 @@ import lombok.NoArgsConstructor;
 @Data @NoArgsConstructor
 public class Paging {
 	
-	private int page = 1; // 현재 페이지
+private int page = 1; // 현재 페이지
 	
 	private int offset = 0; // 시작 위치
-	private int limit = 10; // 레코드 수(보여지는 데이터 수)
-	
+	private int limit = 12; // 레코드 수(보여지는 데이터 수)
 	
 	private int pageSize = 10; // 한 페이지 당 페이지 개수
 	private int endPage = this.pageSize; // 한 페이지의 마지막 페이지 수
