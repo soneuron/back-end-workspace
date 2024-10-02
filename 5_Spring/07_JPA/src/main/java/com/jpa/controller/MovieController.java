@@ -18,7 +18,7 @@ import com.jpa.service.MovieService;
 
 @RestController
 @RequestMapping("/api/*")
-@CrossOrigin(origins= {"*"})
+@CrossOrigin(origins= {"*"}, maxAge=6000)
 public class MovieController {
 	
 	@Autowired
